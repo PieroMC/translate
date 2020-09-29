@@ -4,8 +4,11 @@ CREATE DATABASE db_translate;
 
 use db_translate;
 
-CREATE TABLE IF NOT EXISTS words(
-
-    
-
+CREATE TABLE words(
+    id INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    word VARCHAR(20) NOT NULL ,
+    translated VARCHAR(20) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
 );
+
+DESCRIBE words;
