@@ -2,21 +2,28 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class TranslateContoller {
     /**
-     * index
+     * show @void
      */
-    index(req, res) {
-        res.send('translate');
+    show(req, res) {
+        res.json({ text: "these are all the words" });
+    }
+    /**
+     * showOne @void
+     */
+    showOne(req, res) {
+        res.json({ text: "this is a word " + req.params.word });
     }
     /**
      * create @void
      */
     create(req, res) {
-        res.json({ text: "creating word" });
+        res.json({ text: "creating a word" });
     }
     /**
-     * delete
+     * delete @void
      */
     delete(req, res) {
+        res.json({ text: "deleting a word " + req.params.id });
     }
 }
 const translateController = new TranslateContoller();

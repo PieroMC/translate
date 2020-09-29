@@ -14,8 +14,10 @@ class TranslateRoute {
      * config
      */
     config() {
-        this.router.get('/', translateController_1.default.index);
+        this.router.get('/', translateController_1.default.show);
+        this.router.get('/:word', translateController_1.default.showOne);
         this.router.post('/', translateController_1.default.create);
+        this.router.delete('/:id', translateController_1.default.delete);
     }
 }
 const translateRoute = new TranslateRoute();
