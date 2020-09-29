@@ -15,6 +15,7 @@ class TranslateRoute {
      */
     config() {
         this.router.get('/', translateController_1.default.index);
+        this.router.post('/', translateController_1.default.create);
     }
 }
 const translateRoute = new TranslateRoute();
