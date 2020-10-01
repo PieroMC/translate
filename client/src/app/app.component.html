@@ -1,0 +1,23 @@
+<h1 class="title"><u>Translator</u></h1><br> 
+
+<div class="container-fluid">
+    
+
+<div class="row">
+    <div class="col-6 translator">
+        <h2 class="title">Translate to spanish</h2><br>
+        <app-translator></app-translator>
+    </div>
+
+    <div class="col-6 translator-table">
+        <h2 class="title">Word Register</h2><br>
+        <app-translator-table></app-translator-table>
+    </div>
+</div>
+</div>
+
+<div *ngFor="let word of words">
+    <li>{{ word.id }}</li>
+    <li>{{ word.word }}</li>
+    <li>{{ word.translated }}</li>
+</div>
