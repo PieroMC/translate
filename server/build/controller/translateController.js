@@ -21,7 +21,7 @@ class TranslateContoller {
         return __awaiter(this, void 0, void 0, function* () {
             const words = yield database_1.default.query('SELECT * FROM words');
             if (words.length > 0) {
-                res.json([{ message: "success", words }]);
+                res.json({ words });
             }
             else {
                 res.json({ message: "not found" });
@@ -35,7 +35,7 @@ class TranslateContoller {
         return __awaiter(this, void 0, void 0, function* () {
             const word = yield database_1.default.query('SELECT * FROM words WHERE word = ?', req.params.word);
             if (word.length > 0) {
-                res.json([{ message: "success", word }]);
+                res.json({ word });
             }
             else {
                 res.json({ message: "not found" });
